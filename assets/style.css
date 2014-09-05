@@ -23,11 +23,10 @@ input { color:inherit; font:inherit; border:none; background:transparent; outlin
 p.likes{ font-size: 2em;}
 
 
-html{
+html, body{
+	height: 100%;
+	width: 100%;
 	overflow: hidden;
-}
-
-body{
 	overflow: hidden;
 }
 
