@@ -1,8 +1,3 @@
-/*
-	Created by Kaspars Dambis
-	http://konstruktors.com
-*/
-
 var metrogram = angular.module(
 		'metrogram', []
 	).config(

@@ -1,20 +1,17 @@
 <!doctype html>
 <html ng-app="metrogram">
 <head>
-	<!--
-		Created by Kaspars Dambis
-		http://konstruktors.com
-	-->
 	<meta charset="utf-8" />
-	<title>Metrogram</title>
+	<title>Instaview</title>
 	<link rel="stylesheet" href="assets/style.css" />
 	<script src="assets/angular.min.js"></script>
 	<script src="assets/metrogram.js"></script>
 </head>
 <body ng-controller="slideshow" ng-class="loadingClass">
 	<h1>
-		<img src="assets/instagram-logo.png" /> 
-		#<input type="text" ng-model="tag" ng-change="tagChange()" ng-init="tag = 'metronetlife'" size="{{ tag.length }}" />
+		TAGGA
+		#<input type="text" ng-model="tag" ng-change="tagChange()" ng-init="tag = 'johannesbar'" size="{{ tag.length+3 }}" />
+		PÅ INSTAGRAM
 	</h1>
 
 	<ul id="slides">
@@ -24,13 +21,10 @@
 			</figure>
 
 			<div class="meta">
-				<p class="qr">
-					<img ng-src="http://qrfree.kaywa.com/?s=8&amp;d={{ image.link | escape }}" />
-				<p>
 				<p class="caption">
 					<cite class="author">
-						<img ng-src="{{ image.user.profile_picture }}" width="40" height="40" /> 
-						{{ image.user.username }}
+						<img ng-src="{{ image.user.profile_picture }}" width="80" height="80" /> 
+						@{{ image.user.username }}
 					</cite> 
 					{{ image.caption.text }}
 				</p>
@@ -40,8 +34,8 @@
 				<ul class="comments">
 					<li class="comment" ng-repeat="comment in image.comments.data">
 						<cite class="author">
-							<img ng-src="{{ comment.from.profile_picture }}" width="40" height="40" /> 
-							{{ comment.from.username }}
+							<img ng-src="{{ comment.from.profile_picture }}" width="70" height="70" /> 
+							@{{ comment.from.username }}
 						</cite> 
 						{{ comment.text }}
 					</li>
@@ -49,5 +43,9 @@
 			</div>
 		</li>
 	</ul>
+
+	<video autoplay loop id="bgvid">
+		<source src="assets/loop1.mp4" type="video/mp4">
+	</video>
 </body>
 </html>
