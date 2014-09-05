@@ -35,7 +35,7 @@
 				<ul class="comments">
 					<li class="comment" ng-repeat="comment in image.comments.data">
 						<cite class="author">
-							<img ng-src="{{ comment.from.profile_picture }}" width="70" height="70" /> 
+							<img ng-src="{{ comment.from.profile_picture }}" class="commentimg" width="70" height="70" /> 
 							@{{ comment.from.username }}
 						</cite> 
 						{{ comment.text }}

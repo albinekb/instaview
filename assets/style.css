@@ -2,7 +2,7 @@ body {  font:18px/1.2 sans-serif; font-family: Helvetica, Helvetica Neue, Roboto
 ul, li { margin:0; padding:0; list-style:none; display:block; }
 cite { font-style:normal; font-weight:bold; }
 h1 { font-weight: 300; font-size: 60px; text-align:left;  margin:0; padding:1em 0 0.4em 1em; width:80%; color:#fff; text-shadow:0 -1px 0 #333; }
-h1 input { text-shadow:0 -1px 0 #333; margin:0; padding:0; border-radius:0.1em; }
+h1 input { font-weight: bold; text-shadow:0 -1px 0 #333; margin:0; padding:0; border-radius:0.1em; }
 h1:hover input { background:rgba(0,0,0,0.1); }
 h1 img { vertical-align: middle; }
 img { border-radius:0.2em; }
@@ -16,9 +16,9 @@ input { font-weight: bold; color:inherit; font:inherit; border:none; background:
 .slide .caption { font-size:24px; margin-top:5em; }
 .author img { float:left; margin:0 -10em 0 -100px; }
 .qr img { width:100px; height:100px; }
-.meta { height:0; margin-left:56%; width:35%; position:relative; z-index:10; }
-.meta cite { display:block; font-size:2em; }
-.comments { margin-left:1em; }
+.meta { height:0; margin-left:56%; width:35%;  position:relative; z-index:10; }
+.meta cite { display:block; font-size:3em; }
+.comments { margin-left:1em; margin-right:3em; }
 .comment { display:block; clear:both; min-height:2.5em; padding:0 2em 1em; margin:0; }
 p.likes{ font-size: 2em;}
 
