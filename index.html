@@ -6,16 +6,18 @@
 	<link rel="stylesheet" href="assets/style.css" />
 	<script src="assets/angular.min.js"></script>
 	<script src="assets/metrogram.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 </head>
 <body ng-controller="slideshow" ng-class="loadingClass">
 <main>
-	<h1>
+	<h1 class="sli">
 		TAGGA
 		<b>#{{ tag }}</b>
 		PÅ INSTAGRAM
 	</h1>
 
-	<ul id="slides">
+	<ul id="slides" class="sli">
 		<li ng-repeat="image in images" class="slide" ng-class="{ active : image.isActive }">
 			<figure>
 				<img ng-src="{{ image.images.standard_resolution.url }}" class="image" />
@@ -45,9 +47,63 @@
 		</li>
 	</ul>
 
+	<div class="full_happy hidden"></div>
+	<div class="full_johannes hidden"></div>
+
 	<video autoplay loop id="bgvid">
 		<source src="assets/loop1.mp4" type="video/mp4">
 	</video>
+
 </main>
+
+<script>
+$(document).ready(function(){
+happyhour = false;
+
+$('.sli').toggleClass('hidden');
+
+
+
+var timer = function(){
+	var d = new Date();
+	var h = d.getHours();
+	var m = d.getMinutes();
+	var s = d.getSeconds();
+
+	if(h < 23){
+		happyhour = true;
+	}else{
+		happyhour = false;
+	}
+	console.log(m);
+	if(m == 10 | m == 20 | m == 36 | m == 40 | m == 50 | m == 00){
+		if(s < 30 && happyhour == true){
+			$('.sli').addClass('hidden');
+			$('.full_happy').removeClass('hidden');
+			$('.full_johannes').addClass('hidden');
+		}else if(s > 30){
+			$('.sli').addClass('hidden');
+			$('.full_johannes').removeClass('hidden');
+			$('.full_happy').addClass('hidden');
+		}else{
+			$('.sli').addClass('hidden');
+			$('.full_johannes').removeClass('hidden');
+			$('.full_happy').addClass('hidden');
+		}
+	}else{
+		$('.sli').removeClass('hidden');
+		$('.full_johannes').addClass('hidden');
+		$('.full_happy').addClass('hidden');
+	}
+
+	setTimeout(function(){ timer() }, 1000);
+}
+
+timer()
+
+
+
+});
+</script>
 </body>
 </html>
