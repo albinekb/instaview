@@ -51,7 +51,7 @@
 	<div class="full_johannes hidden"></div>
 
 	<video autoplay loop id="bgvid">
-		<source src="assets/loop1.mp4" type="video/mp4">
+		<source src="http://anettejacobsson.se/nype/assets/video.mp4" type="video/mp4">
 	</video>
 
 </main>
@@ -75,16 +75,11 @@ var timer = function(){
 	}else{
 		happyhour = false;
 	}
-	console.log(m);
 	if(m == 10 | m == 20 | m == 30 | m == 40 | m == 50 | m == 00){
 		if(s < 30 && happyhour == true){
 			$('.sli').addClass('hidden');
 			$('.full_happy').removeClass('hidden');
 			$('.full_johannes').addClass('hidden');
-		}else if(s > 30){
-			$('.sli').addClass('hidden');
-			$('.full_johannes').removeClass('hidden');
-			$('.full_happy').addClass('hidden');
 		}else{
 			$('.sli').addClass('hidden');
 			$('.full_johannes').removeClass('hidden');
