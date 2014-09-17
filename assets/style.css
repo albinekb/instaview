@@ -76,6 +76,18 @@ video#bgvid {
 	opacity: 1;	
 	-webkit-transition: all 0.5s;
 }
+
+
+.full_karaoke{
+	width: 1920px;
+	height: 1080px;
+	background: url(karaoke.png);
+	position: absolute;
+	top: 0;
+	opacity: 1;	
+	-webkit-transition: all 0.5s;
+}
+
 .hidden{
 	opacity: 0;
 	-webkit-transition: all 0.5s;

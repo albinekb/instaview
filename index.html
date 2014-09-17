@@ -49,6 +49,7 @@
 
 	<div class="full_happy hidden"></div>
 	<div class="full_johannes hidden"></div>
+	<div class="full_karaoke hidden"></div>
 
 	<video autoplay loop id="bgvid">
 		<source src="http://anettejacobsson.se/nype/assets/video.mp4" type="video/mp4">
@@ -69,6 +70,8 @@ var timer = function(){
 	var h = d.getHours();
 	var m = d.getMinutes();
 	var s = d.getSeconds();
+	var day = d.getDay();
+
 
 	if(h < 23){
 		happyhour = true;
@@ -76,14 +79,21 @@ var timer = function(){
 		happyhour = false;
 	}
 	if(m == 10 | m == 20 | m == 30 | m == 40 | m == 50 | m == 00){
-		if(s < 30 && happyhour == true){
+		if(s < 20 && happyhour == true){
 			$('.sli').addClass('hidden');
 			$('.full_happy').removeClass('hidden');
 			$('.full_johannes').addClass('hidden');
-		}else{
+			$('.full_karaoke').addClass('hidden');
+		}else if(s < 40) {
 			$('.sli').addClass('hidden');
 			$('.full_johannes').removeClass('hidden');
 			$('.full_happy').addClass('hidden');
+			$('.full_karaoke').addClass('hidden');
+		}else if(s < 60 && day == 3){
+			$('.sli').addClass('hidden');
+			$('.full_karaoke').removeClass('hidden');
+			$('.full_happy').addClass('hidden');
+			$('.full_johannes').addClass('hidden');
 		}
 	}else{
 		$('.sli').removeClass('hidden');
