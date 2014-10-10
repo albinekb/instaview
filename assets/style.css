@@ -73,7 +73,7 @@ video#bgvid {
 	background: url(johannes.png);
 	position: absolute;
 	top: 0;
-	opacity: 1;	
+	opacity: 1;
 	-webkit-transition: all 0.5s;
 }
 
@@ -81,10 +81,10 @@ video#bgvid {
 .full_karaoke{
 	width: 1920px;
 	height: 1080px;
-	background: url(karaoke.png);
+	background: url(johannes.png);
 	position: absolute;
 	top: 0;
-	opacity: 1;	
+	opacity: 1;
 	-webkit-transition: all 0.5s;
 }
 
