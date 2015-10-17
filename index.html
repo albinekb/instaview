@@ -26,9 +26,9 @@
 			<div class="meta">
 				<p class="caption">
 					<cite class="author">
-						<img ng-src="{{ image.user.profile_picture }}" width="80" height="80" /> 
+						<img ng-src="{{ image.user.profile_picture }}" width="80" height="80" />
 						@{{ image.user.username }}
-					</cite> 
+					</cite>
 					{{ image.caption.text }}
 				</p>
 				<p class="likes">
@@ -37,9 +37,9 @@
 				<ul class="comments">
 					<li class="comment" ng-repeat="comment in image.comments.data">
 						<cite class="author">
-							<img ng-src="{{ comment.from.profile_picture }}" class="commentimg" width="70" height="70" /> 
+							<img ng-src="{{ comment.from.profile_picture }}" class="commentimg" width="70" height="70" />
 							@{{ comment.from.username }}
-						</cite> 
+						</cite>
 						{{ comment.text }}
 					</li>
 				</ul>
@@ -51,9 +51,7 @@
 	<div class="full_johannes hidden"></div>
 	<div class="full_karaoke hidden"></div>
 
-	<video autoplay loop id="bgvid">
-		<source src="http://anettejacobsson.se/nype/assets/video.mp4" type="video/mp4">
-	</video>
+	
 
 </main>
 
